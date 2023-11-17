@@ -5,20 +5,42 @@ import {
   createBrowserRouter,
   RouterProvider,
  } from "react-router-dom";
-import App from './App';
+import Main from './components/Layout/Main';
 import PageNotFound from './components/PageNotFound/PageNotFound';
- 
+import Home from './components/Home/Home';
+import Statistics from './components/Statistics/Statistics';
+import AppliedJobs from './components/AppliedJobs/AppliedJobs';
+import Blogs from './components/Blogs/Blogs';
+
  const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    errorElement: <PageNotFound></PageNotFound>,
+    element: <Main></Main>,
+    errorElement: <PageNotFound />,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "statistics",
+        element: <Statistics></Statistics>,
+      },
+      {
+        path: "jobs",
+        element: <AppliedJobs></AppliedJobs>,
+      },
+      {
+        path: "blogs",
+        element: <Blogs></Blogs>,
+      }
+    ]
   },
  ]);
  
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
