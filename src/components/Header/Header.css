@@ -1,0 +1,14 @@
+.btn-common {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background: var(--Linear, linear-gradient(90deg, #7e90fe 0%, #9873ff 100%));
+}
+.header-bg {
+    background-color: red;
+}
