@@ -1,0 +1,8 @@
+.category-title {
+  color: var(--Dark-02, #474747);
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
