@@ -3,7 +3,7 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div className="hero bg-[linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%)]">
+    <div className="hero bg-gray-100">
       <div className="container">
         <div className="flex lg:flex-row-reverse items-center">
           <img src={user} />

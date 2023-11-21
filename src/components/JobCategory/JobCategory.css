@@ -1,0 +1,8 @@
+.sub-header {
+  color: var(--Dark-01, #1a1919);
+  font-family: Manrope;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
