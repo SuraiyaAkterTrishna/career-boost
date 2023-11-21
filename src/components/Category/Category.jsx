@@ -10,7 +10,7 @@ const Category = ({ category }) => {
             alt="category-logo"
           />
           <h2 className="card-title">{category_name}</h2>
-          <p>{availability}</p>
+          <p className="banner-detail">{availability}</p>
         </div>
       </div>
     </div>
