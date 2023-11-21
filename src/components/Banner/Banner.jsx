@@ -5,8 +5,7 @@ const Banner = () => {
   return (
     <div className="hero bg-gray-100">
       <div className="container">
-        <div className="flex lg:flex-row-reverse items-center">
-          <img src={user} />
+        <div className="lg:flex items-center">
           <div>
             <h1 className="text-7xl font-bold banner-title">
               One Step <br />
@@ -20,6 +19,7 @@ const Banner = () => {
             </p>
             <button className="btn-common">Get Started</button>
           </div>
+          <img src={user} />
         </div>
       </div>
     </div>

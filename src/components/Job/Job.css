@@ -1,0 +1,11 @@
+.secondary-btn {
+  color: #7e90fe;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid var(--Linear, #7e90fe);
+}
