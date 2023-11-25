@@ -29,8 +29,11 @@ const AppliedJobs = () => {
       <h1 className="text-3xl text-center font-bold pb-16">Applied Jobs</h1>
       <br />
       <hr />
+
       {appliedJobs.length === 0 ? (
-        <p className="text-center text-gray-500 my-24">No applied jobs available.</p>
+        <p className="text-center text-gray-500 my-24">
+          No applied jobs available.
+        </p>
       ) : (
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-8 my-24">
           {appliedJobs.map((job) => (
@@ -38,8 +41,9 @@ const AppliedJobs = () => {
           ))}
         </div>
       )}
-      </div>
+    </div>
   );
 };
 
 export default AppliedJobs;
+
