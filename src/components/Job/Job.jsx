@@ -1,9 +1,11 @@
 import "./Job.css";
 import location2 from '../../assets/icons/location2.png';
 import money from '../../assets/icons/money.png';
+import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -34,7 +36,7 @@ const Job = ({ job }) => {
             </div>
           </div>
           <div className="card-actions">
-            <button className="btn-common">View Details</button>
+            <Link to={`/job/${id}`}><button className="btn-common">View Details</button></Link>
           </div>
         </div>
       </div>
