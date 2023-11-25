@@ -6,16 +6,23 @@ import title from "../../assets/icons/calendar.png";
 import phone from "../../assets/icons/phone.png";
 import email from "../../assets/icons/email.png";
 import address from "../../assets/icons/location2.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const JobDetail = () => {
   const job = useLoaderData();
   const [isApplied, setIsApplied] = useState(false);
 
+  useEffect(() => {
+    // Check if the job id exists in local storage
+    const appliedJobIds = JSON.parse(localStorage.getItem("appliedJobIds")) || [];
+    setIsApplied(appliedJobIds.includes(job.id));
+  }, [job.id]);
+
   if (!job) {
     return <div>Loading...</div>;
   }
   const {
+    id,
     job_description,
     job_responsibility,
     educational_requirements,
@@ -26,6 +33,12 @@ const JobDetail = () => {
 
 const handleApplyNowBtn = () => {
   setIsApplied(true);
+
+  const appliedJobIds = JSON.parse(localStorage.getItem("appliedJobIds")) || [];
+    if (!appliedJobIds.includes(id)) {
+      appliedJobIds.push(id);
+      localStorage.setItem("appliedJobIds", JSON.stringify(appliedJobIds));
+    }
 }
   return (
     <div className="container mx-auto">
